@@ -1,11 +1,11 @@
 import { NavLink } from 'react-router-dom';
-import { IoMoonOutline } from 'react-icons/io5'
+import { HiOutlineMoon, HiOutlineSun } from 'react-icons/hi';
 import './index.scss';
 
-const HeaderComponent = () => {
+const Header = ({ isDarkModeOn, setIsDarkModeOn }) => {
   return (
-    <div className="HeaderComponent">
-      <div className="dev-name">Ravi</div>
+    <div className="Header">
+      <div className="dev-name">Ravi Chaudhary</div>
       <nav>
         <NavLink to="/">Home</NavLink>
         <NavLink to="#">About</NavLink>
@@ -13,10 +13,14 @@ const HeaderComponent = () => {
         <NavLink to="#">Services</NavLink>
         <NavLink to="#">Portfolio</NavLink>
         <NavLink to="#">Contact </NavLink>
-        <NavLink to="#"><IoMoonOutline /></NavLink>
+        <NavLink to="#">
+          <div onClick={() => setIsDarkModeOn((pre) => !pre)}>
+            {isDarkModeOn ? <HiOutlineSun /> : <HiOutlineMoon />}
+          </div>
+        </NavLink>
       </nav>
     </div>
   );
 };
 
-export default HeaderComponent;
+export default Header;
