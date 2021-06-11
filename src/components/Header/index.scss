@@ -1,0 +1,14 @@
+.HeaderComponent {
+    display: flex;
+    justify-content: space-between;
+    nav {
+        display: flex;
+        justify-content: flex-end;
+        height: 6vh;
+        gap: 1vw;
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    }
+}
