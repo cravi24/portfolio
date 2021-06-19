@@ -1,10 +1,16 @@
+@import '../../styles/media-queries.scss';
+
 .Header {
-    display: flex;
-    justify-content: space-between;
+    visibility: hidden;
+    height: 10vh;
+    @include from-medium() {
+        display: flex;
+        visibility: visible;
+        justify-content: space-between;
+    }
     nav {
         display: flex;
         justify-content: flex-end;
-        height: 6vh;
         gap: 1vw;
         a {
             text-decoration: none;

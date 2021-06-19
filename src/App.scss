@@ -1,7 +1,35 @@
+@import './styles/media-queries.scss';
+
 .App {
   text-align: center;
   margin: 2vh 5vw;
-  font-family: BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Poppins', sans-serif;
+
+  @include from-large() {
+    margin: 2vh 30vw;
+  }
+  .download {
+    text-align: center;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+  }
+
+  .heading {
+    margin: 0;
+  }
+
+  .grey-text {
+    color: grey;
+  }
+}
+
+* {
+  box-sizing: border-box;
 }

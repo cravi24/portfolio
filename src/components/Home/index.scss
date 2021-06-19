@@ -1,0 +1,57 @@
+@import '../../styles/media-queries.scss';
+
+.Home {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    position: relative;
+
+    @include from-medium() {
+        justify-content: space-between;
+    }
+    .summary-container {
+        width: 100%;
+        @include from-medium() {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: flex-end;
+            margin: 0 0 0 10vw;
+        }
+
+        summary {
+            text-align: left;
+            h5 {
+                font-size: 1.2em;
+                margin: 0.5em 0;
+            }
+        }
+        .selfie {
+            color: #6c55e0;
+            font-size: 200px;
+
+            @include from-medium() {
+                font-size: 300px;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            .contact {
+                display: flex;
+                background-color: #6c55e0;
+                color: whitesmoke;
+                width: fit-content;
+                padding: 2vh 5vw;
+                border-radius: 1vh;
+                margin: 5vh 0 0;
+                @include from-medium() {
+                    padding: 2vh 1vw;
+                }
+                .email {
+                    margin-left: 2vw;
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}

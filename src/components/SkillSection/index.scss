@@ -1,0 +1,39 @@
+.SkillSection {
+    margin: 5vh 0;
+    .title-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .skill-icon {
+            font-size: 30px;
+            color: #6c55e0;
+            margin-right: 2vw;
+        }
+        .title {
+            display: flex;
+            align-items: center;
+            h5 {
+                text-align: left;
+                display: block;
+            }
+        }
+    }
+    .skill {
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1vh;
+    }
+
+    h4,
+    h5 {
+        display: inline;
+    }
+
+    h4 {
+        text-align: left;
+    }
+    h5 {
+        text-align: right;
+    }
+}

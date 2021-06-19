@@ -1,0 +1,59 @@
+@import '../../styles/media-queries.scss';
+
+.About {
+    margin-top: 15vh;
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        @include from-medium() {
+            flex-direction: row;
+            gap: 5vw;
+        }
+        .contact {
+            background-color: #6c55e0;
+            color: whitesmoke;
+            width: fit-content;
+            padding: 2vh 5vw;
+            border-radius: 1vh;
+            margin: 2vh 0;
+        }
+
+        .summary {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            margin: 2vh 0;
+        }
+
+        img {
+            display: block;
+            border-radius: 5px;
+            margin: 2vh;
+        }
+
+        a {
+            text-decoration: none;
+            .download {
+                display: flex;
+                background-color: #6c55e0;
+                color: whitesmoke;
+                width: fit-content;
+                padding: 2vh 5vw;
+                border-radius: 1vh;
+                margin: 5vh 0 0;
+
+                @include from-medium() {
+                    padding: 2vh 1vw;
+                }
+                .download-icon {
+                    margin-left: 2vw;
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+.Timeline {
+    display: flex;
+    margin-top: 3vh;
+    flex-direction: column;
+    text-align: left;
+    .container {
+        width: 50%;
+
+        .grey-text,
+        .duration {
+            font-size: 0.9em;
+        }
+    }
+
+    .container.right {
+        width: 100%;
+        padding-left: calc(50% + 10vw);
+    }
+    
+    .container::before {
+        content: '';
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        background-color: #6c55e0;
+        border-radius: 50%;
+        left: calc(50% - 5px);
+        z-index: 1;
+    }
+}
+
+.Timeline::after {
+    content: ' ';
+    position: absolute;
+    width: 6px;
+    background-color: #a5a1b6;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+}
