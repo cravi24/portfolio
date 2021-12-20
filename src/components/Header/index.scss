@@ -1,20 +1,42 @@
 @import '../../styles/media-queries.scss';
 
-.Header {
-    visibility: hidden;
-    height: 10vh;
-    @include from-medium() {
-        display: flex;
-        visibility: visible;
-        justify-content: space-between;
+.header {
+  grid-area: header;
+
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+
+  @include tablet() {
+    display: flex;
+  }
+
+  &__name {
+    text-align: left;
+    font-size: x-large;
+  }
+
+  &__nav {
+    display: flex;
+  }
+
+  &__nav-item {
+    display: grid;
+    place-items: center;
+    flex-grow: 1;
+    min-width: 5rem;
+    padding: 8px;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+
+    &:hover {
+      top: -2px;
+      font-weight: bolder;
     }
-    nav {
-        display: flex;
-        justify-content: flex-end;
-        gap: 1vw;
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
+
+    &.-icon {
+      min-width: 1rem;
     }
+  }
 }

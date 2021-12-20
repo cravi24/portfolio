@@ -5,7 +5,7 @@ import './index.scss';
 
 const Networking = () => {
   return (
-    <div className="Networking">
+    <div className="networking">
       <a
         href="https://www.linkedin.com/in/ravi-chaudhary-0b18241b/"
         target="_blank"

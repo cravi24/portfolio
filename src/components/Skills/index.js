@@ -7,9 +7,9 @@ import './index.scss';
 
 const Skills = () => {
   return (
-    <div className="Skills">
-      <h1 className="heading">Skills</h1>
-      <div className="container">
+    <div className="skills">
+      <h1 className="skills__heading">Skills</h1>
+      <div className="skills__skill-item">
         <SkillSection
           title="Frontend developer"
           years="More than 5 years"

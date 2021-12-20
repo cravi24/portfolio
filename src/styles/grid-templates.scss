@@ -1,0 +1,19 @@
+@mixin mobile-grid-template($gridTemplate) {
+  @include grid-template($gridTemplate, 'mobile');
+}
+
+@mixin tablet-grid-template($gridTemplate) {
+  @include grid-template($gridTemplate, 'tablet');
+}
+
+@mixin desktop-grid-template($gridTemplate) {
+  @include grid-template($gridTemplate, 'desktop');
+}
+
+@mixin grid-template($gridTemplate, $media: 'desktop') {
+  @include grid-template-rows($gridTemplate, $media);
+}
+
+@mixin grid-template-rows($gridTemplate, $media: 'desktop') {
+  grid-template-rows: repeat($gridTemplate, 1fr);
+}

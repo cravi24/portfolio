@@ -1,35 +1,60 @@
-$breakpoint-small: 480px;
-$breakpoint-medium: 768px;
-$breakpoint-semi-large: 960px;
-$breakpoint-large: 1024px;
-$breakpoint-extra-large: 1440px;
+$breakpoint-mobile: 400px;
+$breakpoint-tablet: 960px;
+$breakpoint-desktop: 1024px;
+$breakpoint-large-desktop: 1440px;
 
-@mixin from-small() {
-    @media (min-width: $breakpoint-small) {
-        @content;
-    }
+@mixin mobile() {
+  @media (min-width: $breakpoint-mobile) {
+    @content;
+  }
 }
 
-@mixin from-medium() {
-    @media (min-width: $breakpoint-medium) {
-        @content;
-    }
+@mixin tablet() {
+  @media (min-width: $breakpoint-tablet) {
+    @content;
+  }
 }
 
-@mixin from-semi-large() {
-    @media (min-width: $breakpoint-semi-large) {
-        @content;
-    }
+@mixin desktop() {
+  @media (min-width: $breakpoint-desktop) {
+    @content;
+  }
 }
 
-@mixin from-large() {
-    @media (min-width: $breakpoint-large) {
-        @content;
-    }
+@mixin large-desktop() {
+  @media (min-width: $breakpoint-large-desktop) {
+    @content;
+  }
 }
 
-@mixin from-extra-large() {
-    @media (min-width: $breakpoint-extra-large) {
-        @content;
-    }
+@mixin page-grid {
+  @include grid(12);
+  @include container;
+}
+
+@mixin grid($columns) {
+  display: grid;
+  grid-template-columns: repeat($columns, auto);
+}
+
+@mixin grid-columns($widthInColumns: 12, $startColumn: null) {
+  @if not $startColumn {
+    grid-column: span $widthInColumns;
+  } @else {
+    grid-column: $startColumn / span $widthInColumns;
+  }
+}
+
+@mixin container {
+  @include tablet() {
+    max-width: 900px;
+  }
+
+  @include desktop() {
+    max-width: 980px;
+  }
+
+  @include large-desktop() {
+    max-width: 1400px;
+  }
 }

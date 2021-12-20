@@ -1,7 +1,19 @@
-.Skills {
-    margin-top: 15vh;
-    .container {
-        display: flex;
-        justify-content: space-between;
+@import '../../styles/media-queries.scss';
+
+.skills {
+  grid-area: skills;
+  margin: 2rem 0;
+
+  &__skill-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+
+    @include tablet() {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 5vw;
     }
+  }
 }

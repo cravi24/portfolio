@@ -5,22 +5,21 @@ import './index.scss';
 import { useState } from 'react';
 
 const SkillSection = ({ title, years, skills, children }) => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
   return (
-    <div className="SkillSection">
-      <div className="title-container" onClick={() => setOpen((prev) => !prev)}>
-        <div className="title">
+    <div className="skill">
+      <div className="skill__header" onClick={() => setOpen((prev) => !prev)}>
+        <div className="skill__header-title">
           {children}
-          <div>
+          <div className="skill__heading">
             <h3 className="heading">{title}</h3>
             <h5 className="grey-text">{years}</h5>
           </div>
+          <IconHolder
+            className="skill-icon"
+            icon={open ? <MdExpandLess /> : <MdExpandMore />}
+          />
         </div>
-
-        <IconHolder
-          className="skill-icon"
-          icon={open ? <MdExpandLess /> : <MdExpandMore />}
-        />
       </div>
 
       {open &&

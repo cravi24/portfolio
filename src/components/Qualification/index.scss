@@ -1,23 +1,27 @@
+@import '../../styles/media-queries.scss';
+
 .Qualification {
-    margin-top: 15vh;
-    .header {
-        display: flex;
-        justify-content: space-around;
+  @include grid-columns(8, 3);
 
-        h3 {
-            padding: 0.7vh 2vw;
-            border-radius: 10px;
-        }
-        
-        h3.selected {
-            color: #6c55e0;
-        }
-        // h3:hover {
-        //     background-color: #988ada;
-        // }
+  grid-area: qualification;
+  .header {
+    display: flex;
+    justify-content: space-around;
+
+    h3 {
+      padding: 0.7vh 2vw;
+      border-radius: 10px;
     }
 
-    .history {
-        position: relative;
+    h3.selected {
+      color: #6c55e0;
     }
+    // h3:hover {
+    //     background-color: #988ada;
+    // }
+  }
+
+  .history {
+    position: relative;
+  }
 }

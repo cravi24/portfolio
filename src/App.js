@@ -10,6 +10,7 @@ import About from './components/About';
 import Skills from './components/Skills';
 import Qualification from './components/Qualification';
 import Contact from './components/Contact';
+import Networking from './components/Networking';
 
 function App() {
   const [isDarkModeOn, setIsDarkModeOn] = useState(false);
@@ -18,15 +19,18 @@ function App() {
       <Router>
         <ThemeProvider theme={isDarkModeOn ? darkMode : lightMode}>
           <GlobalStyles />
-          <Header
-            isDarkModeOn={isDarkModeOn}
-            setIsDarkModeOn={setIsDarkModeOn}
-          />
-          <Home />
-          <About />
-          <Skills />
-          <Qualification />
-          <Contact />
+          <Networking />
+          <div className="main">
+            <Header
+              isDarkModeOn={isDarkModeOn}
+              setIsDarkModeOn={setIsDarkModeOn}
+            />
+            <Home />
+            <About />
+            <Skills />
+            <Qualification />
+            <Contact />
+          </div>
         </ThemeProvider>
       </Router>
     </div>

@@ -1,15 +1,28 @@
 @import './styles/media-queries.scss';
 
 .App {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(90%, 10fr) minmax(0, 1fr);
+  grid-template-areas: '. main .';
   text-align: center;
-  margin: 2vh 5vw;
   font-family: 'Poppins', sans-serif;
 
-  @include from-large() {
-    margin: 2vh 30vw;
+  @include tablet() {
+    grid-template-columns: minmax(0, 1fr) minmax(80%, 6fr) minmax(0, 1fr);
+    grid-template-areas: '. main .';
   }
+
+  @include desktop() {
+    grid-template-columns: minmax(0, 1fr) minmax(50%, 3fr) minmax(0, 1fr);
+    grid-template-areas: '. main .';
+  }
+
   .download {
     text-align: center;
+  }
+
+  .main {
+    grid-area: main;
   }
 
   h1,

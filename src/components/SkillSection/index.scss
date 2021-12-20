@@ -1,39 +1,36 @@
-.SkillSection {
-    margin: 5vh 0;
-    .title-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        .skill-icon {
-            font-size: 30px;
-            color: #6c55e0;
-            margin-right: 2vw;
-        }
-        .title {
-            display: flex;
-            align-items: center;
-            h5 {
-                text-align: left;
-                display: block;
-            }
-        }
-    }
-    .skill {
-        text-align: left;
-        display: flex;
-        justify-content: space-between;
-        margin-top: 1vh;
+.skill {
+  &__header {
+    display: flex;
+    align-items: center;
+
+    .skill-icon {
+      font-size: 30px;
+      color: #6c55e0;
     }
 
-    h4,
-    h5 {
-        display: inline;
+    &-title {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
+  }
 
-    h4 {
+  &__heading {
+      display: flex;
+      font-size: 16px;
+      font-weight: bold;
+      flex-direction: column;
+      align-items: flex-start;
+
+      .heading {
         text-align: left;
-    }
-    h5 {
-        text-align: right;
-    }
+      }
+  }
+
+  .skill {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1vh;
+  }
 }

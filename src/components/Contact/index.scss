@@ -1,3 +1,7 @@
+@import '../../styles/media-queries.scss';
+
 .Contact {
-    margin: 15vh 0 5vh;
+  @include grid-columns(8, 3);
+  grid-area: contact;
+  margin: 15vh 0 5vh;
 }

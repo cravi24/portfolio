@@ -1,57 +1,67 @@
 @import '../../styles/media-queries.scss';
 
-.Home {
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  @include tablet() {
     display: flex;
-    justify-content: flex-start;
-    flex-direction: row;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  &__selfie {
+    color: #6c55e0;
+    font-size: 200px;
     position: relative;
+    top: -20px;
 
-    @include from-medium() {
-        justify-content: space-between;
+    @include tablet() {
+      font-size: 250px;
+      top: -25px;
     }
-    .summary-container {
-        width: 100%;
-        @include from-medium() {
-            display: flex;
-            flex-direction: row-reverse;
-            align-items: flex-end;
-            margin: 0 0 0 10vw;
-        }
+  }
 
-        summary {
-            text-align: left;
-            h5 {
-                font-size: 1.2em;
-                margin: 0.5em 0;
-            }
-        }
-        .selfie {
-            color: #6c55e0;
-            font-size: 200px;
+  &__cta-email {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
 
-            @include from-medium() {
-                font-size: 300px;
-            }
-        }
-
-        a {
-            text-decoration: none;
-            .contact {
-                display: flex;
-                background-color: #6c55e0;
-                color: whitesmoke;
-                width: fit-content;
-                padding: 2vh 5vw;
-                border-radius: 1vh;
-                margin: 5vh 0 0;
-                @include from-medium() {
-                    padding: 2vh 1vw;
-                }
-                .email {
-                    margin-left: 2vw;
-                    font-size: 24px;
-                }
-            }
-        }
+    @include tablet() {
+      justify-content: left;
     }
+
+    .contact {
+      display: flex;
+      background-color: #6c55e0;
+      color: whitesmoke;
+      width: fit-content;
+      padding: 0.5rem 1rem;
+      border-radius: 1vh;
+      margin-top: 1rem;
+
+      .email {
+        margin-left: 2vw;
+        font-size: 24px;
+      }
+    }
+  }
+
+  &__summary {
+    display: inline-flex;
+    flex-direction: column;
+
+    @include tablet() {
+      text-align: left;
+    }
+    h5 {
+      font-size: 1.2em;
+      margin: 0.5em 0;
+    }
+  }
 }
